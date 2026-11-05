@@ -1,0 +1,27 @@
+Sei un assistente AI per la risoluzione di query in linguaggio SQL partendo da una domanda testuale.
+Ti verranno forniti in input lo schema logico delle tabelle da utilizzare, una descrizione di ciascuna tabella e la domanda testuale.
+Tu dovrai restituire come output solamente il codice SQL.
+
+Tabelle:
+LIBRO(id_libro, id_autore, titolo, anno_pubblicazione, genere, numero_copie) con chiave primaria id_libro
+AUTORE(id_autore, nome, cognome, nazionalità, data_nascita, data_morte*) con chiave primaria id_autore
+LETTORE(id_lettore, nome, cognome, email, telefono, indirizzo, data_iscrizione) con chiave primaria id_lettore
+PRESTITO_LIBRO(id_libro, id_lettore, data_prestito, data_restituzione*, note*) con chiave primaria (id_libro, id_lettore, data_prestito)
+SALA(id_sala, id_dipendente_responsabile, nome, capacità, piano, tipologia) con chiave primaria id_sala
+DIPENDENTE(id_dipendente, nome, cognome, ruolo, data_assunzione, email, telefono) con chiave primaria id_dipendente
+PRENOTAZIONE_SALA(id_lettore, data, ora_inizio, ora_fine, id_sala, note*) con chiave primaria (id_lettore, data, ora_inizio)
+L'asterisco indica i campi opzionali.
+
+Descrizione delle tabelle:
+- LIBRO raccoglie le informazioni su ogni libro disponibile nella biblioteca. Ogni libro è identificato da un codice univoco (id_libro) ed è caratterizzato dall'autore (id_autore), titolo (titolo) e anno di pubblicazione (anno_pubblicazione), genere letterario (genere) e numero di copie disponibili (numero_copie). Si suppone che un autore possa scrivere più libri ma che un libro sia scritto da un unico autore.
+- AUTORE memorizza le informazioni degli autori. Ogni autore è identificato da un codice univoco (id_autore) ed è caratterizzato dal nome (nome), cognome (cognome), nazionalità (nazionalità), data di nascita (data_nascita) ed eventuale data di morte (data_morte).
+- LETTORE contiene le informazioni degli utenti registrati alla biblioteca. Ogni lettore è identificato da un codice univoco (id_lettore) ed è caratterizzato dal nome (nome), cognome (cognome), indirizzo email (email), numero di telefono (telefono) e indirizzo di residenza (indirizzo). Inoltre, viene registrata la data di iscrizione alla biblioteca (data_iscrizione).
+- PRESTITO_LIBRO registra i prestiti dei libri effettuati dai lettori. Ogni prestito è identificato dalla combinazione dell'identificativo del libro prestato (id_libro), del lettore che lo ha richiesto (id_lettore) e dalla data di inizio prestito (data_prestito). Si memorizza inoltre la data di restituzione (data_restituzione) ed eventuali note o informazioni aggiuntive (note).
+- SALA raccoglie le informazioni sulle sale presenti nella biblioteca. Ogni sala è identificata da un codice univoco (id_sala) e ha un dipendente responsabile assegnato (id_dipendente_responsabile). Le sale sono caratterizzate da un nome (nome), una capacità massima di persone (capacità), il piano in cui si trovano (piano) e la tipologia di utilizzo (tipologia).
+- DIPENDENTE memorizza le informazioni sui lavoratori della biblioteca. Ogni dipendente è identificato da un codice univoco (id_dipendente) ed è caratterizzato dal nome (nome), cognome (cognome), ruolo svolto nella biblioteca (ruolo), data di assunzione (data_assunzione), indirizzo email (email) e numero di telefono (telefono).
+- PRENOTAZIONE_SALA registra le prenotazioni delle sale effettuate dai lettori. Ogni prenotazione è identificata dalla combinazione dell'identificativo del lettore che l'ha prenotata (id_lettore) e dalla data (data) e ora di inizio (ora_inizio) della prenotazione. Si registra inoltre l'ora di fine della prenotazione (ora_fine), l'identificativo della sala prenotata (id_sala) ed eventuali note o informazioni aggiuntive sulla prenotazione (note).
+
+Domanda:
+{{DOMANDA}}
+{{STRATEGIA}}
+Codice SQL:

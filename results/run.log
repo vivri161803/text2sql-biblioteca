@@ -1,0 +1,722 @@
+[gen] da fare: 360 (già fatte: 36)
+[gen] 1/360 piccolo/p1_schema/P0-1: ok
+[gen] 2/360 piccolo/p1_schema/P0-2: ok
+[gen] 3/360 piccolo/p1_schema/P1-2: ok
+[gen] 4/360 piccolo/p1_schema/P2-3: ok
+[gen] 5/360 piccolo/p1_schema/P1-1: ok
+[gen] 6/360 piccolo/p1_schema/P1-3: ok
+[gen] 7/360 piccolo/p1_schema/P2-2: ok
+[gen] 8/360 piccolo/p1_schema/P2-1: ok
+[gen] 9/360 piccolo/p1_schema/P3-1/INTERSECT: ok
+[gen] 10/360 piccolo/p1_schema/P3-3/IN: ok
+[gen] 11/360 piccolo/p1_schema/P3-2/INTERSECT: ok
+[gen] 12/360 piccolo/p1_schema/P3-2/IN: ok
+[gen] 13/360 piccolo/p1_schema/P3-3/JOIN: ok
+[gen] 14/360 piccolo/p1_schema/P3-1/JOIN: ok
+[gen] 15/360 piccolo/p1_schema/P3-2/JOIN: ok
+[gen] 16/360 piccolo/p1_schema/P4-2: ok
+[gen] 17/360 piccolo/p1_schema/P3-3/INTERSECT: ok
+[gen] 18/360 piccolo/p1_schema/P5-2/NOT IN: ok
+[gen] 19/360 piccolo/p1_schema/P4-1: ok
+[gen] 20/360 piccolo/p1_schema/P4-3: ok
+[gen] 21/360 piccolo/p1_schema/P5-2/EXCEPT: ok
+[gen] 22/360 piccolo/p1_schema/P3-1/IN: ok
+[gen] 23/360 piccolo/p1_schema/P5-3/NOT IN: ok
+[gen] 24/360 piccolo/p1_schema/P5-3/EXCEPT: ok
+[gen] 25/360 piccolo/p1_schema/P6-3/CTE: ok
+[gen] 26/360 piccolo/p1_schema/P6-1/CORRELAZIONE: ok
+[gen] 27/360 piccolo/p2_schema_descrizioni/P0-2: ok
+[gen] 28/360 piccolo/p1_schema/P6-3/CORRELAZIONE: ok
+[gen] 29/360 piccolo/p2_schema_descrizioni/P0-1: ok
+[gen] 30/360 piccolo/p1_schema/P6-2/CTE: ok
+[gen] 31/360 piccolo/p1_schema/P6-2/CORRELAZIONE: ok
+[gen] 32/360 piccolo/p2_schema_descrizioni/P2-1: ok
+[gen] 33/360 piccolo/p1_schema/P6-1/CTE: ok
+[gen] 34/360 piccolo/p2_schema_descrizioni/P2-3: ok
+[gen] 35/360 piccolo/p2_schema_descrizioni/P1-2: ok
+[gen] 36/360 piccolo/p2_schema_descrizioni/P1-3: ok
+[gen] 37/360 piccolo/p2_schema_descrizioni/P3-1/JOIN: ok
+[gen] 38/360 piccolo/p2_schema_descrizioni/P3-1/INTERSECT: ok
+[gen] 39/360 piccolo/p2_schema_descrizioni/P1-1: ok
+[gen] 40/360 piccolo/p2_schema_descrizioni/P3-2/JOIN: ok
+[gen] 41/360 piccolo/p2_schema_descrizioni/P3-1/IN: ok
+[gen] 42/360 piccolo/p2_schema_descrizioni/P3-3/IN: ok
+[gen] 43/360 piccolo/p2_schema_descrizioni/P3-2/IN: ok
+[gen] 44/360 piccolo/p2_schema_descrizioni/P3-2/INTERSECT: ok
+[gen] 45/360 piccolo/p2_schema_descrizioni/P4-2: ok
+[gen] 46/360 piccolo/p2_schema_descrizioni/P3-3/JOIN: ok
+[gen] 47/360 piccolo/p2_schema_descrizioni/P5-2/NOT IN: ok
+[gen] 48/360 piccolo/p2_schema_descrizioni/P4-3: ok
+[gen] 49/360 piccolo/p2_schema_descrizioni/P2-2: ok
+[gen] 50/360 piccolo/p2_schema_descrizioni/P3-3/INTERSECT: ok
+[gen] 51/360 piccolo/p2_schema_descrizioni/P5-2/EXCEPT: ok
+[gen] 52/360 piccolo/p2_schema_descrizioni/P5-3/EXCEPT: ok
+[gen] 53/360 piccolo/p2_schema_descrizioni/P5-3/NOT IN: ok
+[gen] 54/360 piccolo/p2_schema_descrizioni/P6-3/CORRELAZIONE: ok
+[gen] 55/360 piccolo/p3_cot/P0-1: ok
+[gen] 56/360 piccolo/p2_schema_descrizioni/P6-2/CTE: ok
+[gen] 57/360 piccolo/p2_schema_descrizioni/P6-3/CTE: ok
+[gen] 58/360 piccolo/p3_cot/P0-2: ok
+[gen] 59/360 piccolo/p2_schema_descrizioni/P4-1: ok
+[gen] 60/360 piccolo/p2_schema_descrizioni/P6-1/CORRELAZIONE: ok
+[gen] 61/360 piccolo/p3_cot/P1-1: ok
+[gen] 62/360 piccolo/p3_cot/P1-2: ok
+[gen] 63/360 piccolo/p2_schema_descrizioni/P6-1/CTE: ok
+[gen] 64/360 piccolo/p3_cot/P2-2: ok
+[gen] 65/360 piccolo/p3_cot/P2-3: ok
+[gen] 66/360 piccolo/p3_cot/P3-1/INTERSECT: ok
+[gen] 67/360 piccolo/p3_cot/P1-3: ok
+[gen] 68/360 piccolo/p3_cot/P3-1/IN: ok
+[gen] 69/360 piccolo/p3_cot/P2-1: ok
+[gen] 70/360 piccolo/p3_cot/P3-1/JOIN: ok
+[gen] 71/360 piccolo/p3_cot/P3-2/JOIN: ok
+[gen] 72/360 piccolo/p3_cot/P3-2/INTERSECT: ok
+[gen] 73/360 piccolo/p3_cot/P3-3/JOIN: ok
+[gen] 74/360 piccolo/p3_cot/P4-2: ok
+[gen] 75/360 piccolo/p3_cot/P3-3/IN: ok
+[gen] 76/360 piccolo/p3_cot/P4-1: ok
+[gen] 77/360 piccolo/p3_cot/P3-3/INTERSECT: ok
+[gen] 78/360 piccolo/p3_cot/P3-2/IN: ok
+[gen] 79/360 piccolo/p3_cot/P5-2/NOT IN: ok
+[gen] 80/360 piccolo/p3_cot/P5-2/EXCEPT: ok
+[gen] 81/360 piccolo/p3_cot/P5-3/NOT IN: ok
+[gen] 82/360 piccolo/p3_cot/P4-3: ok
+[gen] 83/360 piccolo/p3_cot/P6-1/CTE: ok
+[gen] 84/360 piccolo/p3_cot/P6-3/CORRELAZIONE: ok
+[gen] 85/360 piccolo/p3_cot/P6-3/CTE: ok
+[gen] 86/360 piccolo/p3_cot/P6-2/CTE: ok
+[gen] 87/360 piccolo/p4_fewshot/P0-1: ok
+[gen] 88/360 piccolo/p3_cot/P5-3/EXCEPT: ok
+[gen] 89/360 piccolo/p4_fewshot/P0-2: ok
+[gen] 90/360 piccolo/p3_cot/P6-1/CORRELAZIONE: ok
+[gen] 91/360 piccolo/p4_fewshot/P1-1: ok
+[gen] 92/360 piccolo/p4_fewshot/P1-2: ok
+[gen] 93/360 piccolo/p4_fewshot/P2-1: ok
+[gen] 94/360 piccolo/p4_fewshot/P1-3: ok
+[gen] 95/360 piccolo/p4_fewshot/P2-3: ok
+[gen] 96/360 piccolo/p4_fewshot/P2-2: ok
+[gen] 97/360 piccolo/p2_schema_descrizioni/P6-2/CORRELAZIONE: ok
+[gen] 98/360 piccolo/p4_fewshot/P3-1/INTERSECT: ok
+[gen] 99/360 piccolo/p4_fewshot/P3-1/JOIN: ok
+[gen] 100/360 piccolo/p4_fewshot/P3-2/IN: ok
+[gen] 101/360 piccolo/p4_fewshot/P3-1/IN: ok
+[gen] 102/360 piccolo/p4_fewshot/P3-3/JOIN: ok
+[gen] 103/360 piccolo/p4_fewshot/P3-2/JOIN: ok
+[gen] 104/360 piccolo/p4_fewshot/P3-2/INTERSECT: ok
+[gen] 105/360 piccolo/p4_fewshot/P3-3/IN: ok
+[gen] 106/360 piccolo/p4_fewshot/P3-3/INTERSECT: ok
+[gen] 107/360 piccolo/p3_cot/P6-2/CORRELAZIONE: ok
+[gen] 108/360 piccolo/p4_fewshot/P5-2/NOT IN: ok
+[gen] 109/360 piccolo/p4_fewshot/P5-2/EXCEPT: ok
+[gen] 110/360 piccolo/p4_fewshot/P4-1: ok
+[gen] 111/360 piccolo/p4_fewshot/P5-3/NOT IN: ok
+[gen] 112/360 piccolo/p4_fewshot/P5-3/EXCEPT: ok
+[gen] 113/360 piccolo/p4_fewshot/P4-2: ok
+[gen] 114/360 medio/p1_schema/P0-1: ok
+[gen] 115/360 medio/p1_schema/P0-2: ok
+[gen] 116/360 medio/p1_schema/P1-1: ok
+[gen] 117/360 medio/p1_schema/P1-2: ok
+[gen] 118/360 medio/p1_schema/P1-3: ok
+[gen] 119/360 piccolo/p4_fewshot/P4-3: ok
+[gen] 120/360 medio/p1_schema/P2-1: ok
+[gen] 121/360 medio/p1_schema/P2-2: ok
+[gen] 122/360 medio/p1_schema/P2-3: ok
+[gen] 123/360 medio/p1_schema/P3-1/JOIN: ok
+[gen] 124/360 piccolo/p4_fewshot/P6-2/CTE: ok
+[gen] 125/360 medio/p1_schema/P3-1/IN: ok
+[gen] 126/360 medio/p1_schema/P3-2/JOIN: ok
+[gen] 127/360 medio/p1_schema/P3-1/INTERSECT: ok
+[gen] 128/360 medio/p1_schema/P3-2/INTERSECT: ok
+[gen] 129/360 piccolo/p4_fewshot/P6-1/CORRELAZIONE: ok
+[gen] 130/360 piccolo/p4_fewshot/P6-1/CTE: ok
+[gen] 131/360 medio/p1_schema/P3-3/IN: ok
+[gen] 132/360 medio/p1_schema/P3-3/JOIN: ok
+[gen] 133/360 medio/p1_schema/P3-3/INTERSECT: ok
+[gen] 134/360 medio/p1_schema/P4-3: ok
+[gen] 135/360 medio/p1_schema/P5-2/NOT IN: ok
+[gen] 136/360 medio/p1_schema/P3-2/IN: ok
+[gen] 137/360 medio/p1_schema/P5-2/EXCEPT: ok
+[gen] 138/360 piccolo/p4_fewshot/P6-3/CORRELAZIONE: ok
+[gen] 139/360 medio/p1_schema/P5-3/NOT IN: ok
+[gen] 140/360 medio/p1_schema/P6-1/CTE: ok
+[gen] 141/360 medio/p1_schema/P4-1: ok
+[gen] 142/360 medio/p1_schema/P5-3/EXCEPT: ok
+[gen] 143/360 medio/p1_schema/P6-1/CORRELAZIONE: ok
+[gen] 144/360 medio/p1_schema/P4-2: ok
+[gen] 145/360 medio/p1_schema/P6-2/CTE: ok
+[gen] 146/360 medio/p1_schema/P6-2/CORRELAZIONE: ok
+[gen] 147/360 medio/p2_schema_descrizioni/P0-1: ok
+[gen] 148/360 medio/p2_schema_descrizioni/P0-2: ok
+[gen] 149/360 medio/p1_schema/P6-3/CORRELAZIONE: ok
+[gen] 150/360 medio/p2_schema_descrizioni/P1-1: ok
+[gen] 151/360 medio/p1_schema/P6-3/CTE: ok
+[gen] 152/360 medio/p2_schema_descrizioni/P1-3: ok
+[gen] 153/360 medio/p2_schema_descrizioni/P1-2: ok
+[gen] 154/360 medio/p2_schema_descrizioni/P3-1/JOIN: ok
+[gen] 155/360 medio/p2_schema_descrizioni/P2-1: ok
+[gen] 156/360 medio/p2_schema_descrizioni/P3-1/IN: ok
+[gen] 157/360 medio/p2_schema_descrizioni/P2-3: ok
+[gen] 158/360 medio/p2_schema_descrizioni/P3-1/INTERSECT: ok
+[gen] 159/360 medio/p2_schema_descrizioni/P2-2: ok
+[gen] 160/360 medio/p2_schema_descrizioni/P3-3/IN: ok
+[gen] 161/360 medio/p2_schema_descrizioni/P3-2/JOIN: ok
+[gen] 162/360 medio/p2_schema_descrizioni/P3-3/JOIN: ok
+[gen] 163/360 medio/p2_schema_descrizioni/P3-2/INTERSECT: ok
+[gen] 164/360 medio/p2_schema_descrizioni/P3-2/IN: ok
+[gen] 165/360 medio/p2_schema_descrizioni/P4-3: ok
+[gen] 166/360 medio/p2_schema_descrizioni/P4-1: ok
+[gen] 167/360 medio/p2_schema_descrizioni/P3-3/INTERSECT: ok
+[gen] 168/360 medio/p2_schema_descrizioni/P5-2/NOT IN: ok
+[gen] 169/360 medio/p2_schema_descrizioni/P5-2/EXCEPT: ok
+[gen] 170/360 medio/p2_schema_descrizioni/P4-2: ok
+[gen] 171/360 medio/p2_schema_descrizioni/P5-3/NOT IN: ok
+[gen] 172/360 piccolo/p4_fewshot/P6-3/CTE: ok
+[gen] 173/360 medio/p2_schema_descrizioni/P5-3/EXCEPT: ok
+[gen] 174/360 medio/p2_schema_descrizioni/P6-2/CTE: ok
+[gen] 175/360 medio/p2_schema_descrizioni/P6-1/CORRELAZIONE: ok
+[gen] 176/360 medio/p2_schema_descrizioni/P6-1/CTE: ok
+[gen] 177/360 medio/p2_schema_descrizioni/P6-3/CORRELAZIONE: ok
+[gen] 178/360 medio/p2_schema_descrizioni/P6-3/CTE: ok
+[gen] 179/360 medio/p2_schema_descrizioni/P6-2/CORRELAZIONE: ok
+[gen] 180/360 medio/p3_cot/P0-2: ok
+[gen] 181/360 medio/p3_cot/P0-1: ok
+[gen] 182/360 medio/p3_cot/P1-1: ok
+[gen] 183/360 medio/p3_cot/P2-1: ok
+[gen] 184/360 medio/p3_cot/P1-2: ok
+[gen] 185/360 medio/p3_cot/P2-3: ok
+[gen] 186/360 medio/p3_cot/P1-3: ok
+[gen] 187/360 medio/p3_cot/P3-1/JOIN: ok
+[gen] 188/360 medio/p3_cot/P2-2: ok
+[gen] 189/360 medio/p3_cot/P3-1/IN: ok
+[gen] 190/360 medio/p3_cot/P3-1/INTERSECT: ok
+[gen] 191/360 medio/p3_cot/P3-2/IN: ok
+[gen] 192/360 medio/p3_cot/P3-3/INTERSECT: ok
+[gen] 193/360 medio/p3_cot/P3-2/INTERSECT: ok
+[gen] 194/360 medio/p3_cot/P3-2/JOIN: ok
+[gen] 195/360 medio/p3_cot/P3-3/JOIN: ok
+[gen] 196/360 medio/p3_cot/P4-1: ok
+[gen] 197/360 medio/p3_cot/P4-2: ok
+[gen] 198/360 medio/p3_cot/P4-3: ok
+[gen] 199/360 medio/p3_cot/P5-2/EXCEPT: ok
+[gen] 200/360 medio/p3_cot/P3-3/IN: ok
+[gen] 201/360 medio/p3_cot/P6-1/CORRELAZIONE: ok
+[gen] 202/360 medio/p3_cot/P5-2/NOT IN: ok
+[gen] 203/360 medio/p3_cot/P6-1/CTE: ok
+[gen] 204/360 medio/p3_cot/P5-3/EXCEPT: ok
+[gen] 205/360 medio/p3_cot/P5-3/NOT IN: ok
+[gen] 206/360 medio/p3_cot/P6-3/CORRELAZIONE: ok
+[gen] 207/360 medio/p4_fewshot/P0-1: ok
+[gen] 208/360 medio/p3_cot/P6-3/CTE: ok
+[gen] 209/360 medio/p3_cot/P6-2/CORRELAZIONE: ok
+[gen] 210/360 medio/p4_fewshot/P0-2: ok
+[gen] 211/360 medio/p4_fewshot/P1-2: ok
+[gen] 212/360 medio/p4_fewshot/P1-3: ok
+[gen] 213/360 medio/p4_fewshot/P1-1: ok
+[gen] 214/360 medio/p3_cot/P6-2/CTE: ok
+[gen] 215/360 medio/p4_fewshot/P3-2/JOIN: ok
+[gen] 216/360 medio/p4_fewshot/P3-1/JOIN: ok
+[gen] 217/360 medio/p4_fewshot/P2-3: ok
+[gen] 218/360 medio/p4_fewshot/P3-1/INTERSECT: ok
+[gen] 219/360 medio/p4_fewshot/P2-1: ok
+[gen] 220/360 medio/p4_fewshot/P2-2: ok
+[gen] 221/360 medio/p4_fewshot/P3-1/IN: ok
+[gen] 222/360 medio/p4_fewshot/P3-2/INTERSECT: ok
+[gen] 223/360 medio/p4_fewshot/P3-2/IN: ok
+[gen] 224/360 medio/p4_fewshot/P3-3/JOIN: ok
+[gen] 225/360 medio/p4_fewshot/P3-3/IN: ok
+[gen] 226/360 medio/p4_fewshot/P3-3/INTERSECT: ok
+[gen] 227/360 medio/p4_fewshot/P5-2/EXCEPT: ok
+[gen] 228/360 medio/p4_fewshot/P4-1: ok
+[gen] 229/360 medio/p4_fewshot/P4-3: ok
+[gen] 230/360 medio/p4_fewshot/P4-2: ok
+[gen] 231/360 medio/p4_fewshot/P5-3/NOT IN: ok
+[gen] 232/360 medio/p4_fewshot/P6-1/CORRELAZIONE: ok
+[gen] 233/360 medio/p4_fewshot/P5-2/NOT IN: ok
+[gen] 234/360 medio/p4_fewshot/P6-1/CTE: ok
+[gen] 235/360 medio/p4_fewshot/P6-2/CORRELAZIONE: ok
+[gen] 236/360 medio/p4_fewshot/P6-2/CTE: ok
+[gen] 237/360 grande/p1_schema/P0-1: ok
+[gen] 238/360 medio/p4_fewshot/P6-3/CTE: ok
+[gen] 239/360 medio/p4_fewshot/P6-3/CORRELAZIONE: ok
+[gen] 240/360 medio/p4_fewshot/P5-3/EXCEPT: ok
+[gen] 241/360 grande/p1_schema/P0-2: ok
+[gen] 242/360 piccolo/p4_fewshot/P6-2/CORRELAZIONE: ok
+[gen] 243/360 grande/p1_schema/P1-1: ok
+[gen] 244/360 grande/p1_schema/P1-2: ok
+[gen] 245/360 grande/p1_schema/P2-1: ok
+[gen] 246/360 grande/p1_schema/P1-3: ok
+[gen] 247/360 grande/p1_schema/P2-3: ok
+[gen] 248/360 grande/p1_schema/P3-1/JOIN: ok
+[gen] 249/360 grande/p1_schema/P2-2: ok
+[gen] 250/360 grande/p1_schema/P3-2/JOIN: ok
+[gen] 251/360 grande/p1_schema/P3-1/IN: ok
+[gen] 252/360 grande/p1_schema/P3-1/INTERSECT: ok
+[gen] 253/360 grande/p1_schema/P3-3/JOIN: ok
+[gen] 254/360 grande/p1_schema/P3-2/IN: ok
+[gen] 255/360 grande/p1_schema/P3-2/INTERSECT: ok
+[gen] 256/360 grande/p1_schema/P3-3/IN: ok
+[gen] 257/360 grande/p1_schema/P4-1: ok
+[gen] 258/360 grande/p1_schema/P3-3/INTERSECT: ok
+[gen] 259/360 grande/p1_schema/P5-2/EXCEPT: ok
+[gen] 260/360 grande/p1_schema/P4-2: ok
+[gen] 261/360 grande/p1_schema/P5-3/NOT IN: ok
+[gen] 262/360 grande/p1_schema/P5-2/NOT IN: ok
+[gen] 263/360 grande/p1_schema/P4-3: ok
+[gen] 264/360 grande/p1_schema/P5-3/EXCEPT: ok
+[gen] 265/360 grande/p1_schema/P6-1/CTE: ok
+[gen] 266/360 grande/p1_schema/P6-1/CORRELAZIONE: ok
+[gen] 267/360 grande/p1_schema/P6-3/CTE: ok
+[gen] 268/360 grande/p1_schema/P6-3/CORRELAZIONE: ok
+[gen] 269/360 grande/p2_schema_descrizioni/P0-1: ok
+[gen] 270/360 grande/p1_schema/P6-2/CTE: ok
+[gen] 271/360 grande/p2_schema_descrizioni/P0-2: ok
+[gen] 272/360 grande/p1_schema/P6-2/CORRELAZIONE: ok
+[gen] 273/360 grande/p2_schema_descrizioni/P1-1: ok
+[gen] 274/360 grande/p2_schema_descrizioni/P2-1: ok
+[gen] 275/360 grande/p2_schema_descrizioni/P1-3: ok
+[gen] 276/360 grande/p2_schema_descrizioni/P2-2: ok
+[gen] 277/360 grande/p2_schema_descrizioni/P1-2: ok
+[gen] 278/360 grande/p2_schema_descrizioni/P3-1/IN: ok
+[gen] 279/360 grande/p2_schema_descrizioni/P3-1/INTERSECT: ok
+[gen] 280/360 grande/p2_schema_descrizioni/P2-3: ok
+[gen] 281/360 grande/p2_schema_descrizioni/P3-1/JOIN: ok
+[gen] 282/360 grande/p2_schema_descrizioni/P3-2/JOIN: ok
+[gen] 283/360 grande/p2_schema_descrizioni/P3-2/IN: ok
+[gen] 284/360 grande/p2_schema_descrizioni/P3-3/JOIN: ok
+[gen] 285/360 grande/p2_schema_descrizioni/P3-2/INTERSECT: ok
+[gen] 286/360 grande/p2_schema_descrizioni/P3-3/INTERSECT: ok
+[gen] 287/360 grande/p2_schema_descrizioni/P3-3/IN: ok
+[gen] 288/360 grande/p2_schema_descrizioni/P4-1: ok
+[gen] 289/360 grande/p2_schema_descrizioni/P5-2/NOT IN: ok
+[gen] 290/360 grande/p2_schema_descrizioni/P4-2: ok
+[gen] 291/360 grande/p2_schema_descrizioni/P5-3/NOT IN: ok
+[gen] 292/360 grande/p2_schema_descrizioni/P4-3: ok
+[gen] 293/360 grande/p2_schema_descrizioni/P5-2/EXCEPT: ok
+[gen] 294/360 grande/p2_schema_descrizioni/P5-3/EXCEPT: ok
+[gen] 295/360 grande/p2_schema_descrizioni/P6-2/CTE: ok
+[gen] 296/360 grande/p2_schema_descrizioni/P6-1/CTE: ok
+[gen] 297/360 grande/p2_schema_descrizioni/P6-3/CTE: ok
+[gen] 298/360 grande/p2_schema_descrizioni/P6-3/CORRELAZIONE: ok
+[gen] 299/360 grande/p2_schema_descrizioni/P6-2/CORRELAZIONE: ok
+[gen] 300/360 grande/p3_cot/P0-1: ok
+[gen] 301/360 grande/p3_cot/P0-2: ok
+[gen] 302/360 grande/p2_schema_descrizioni/P6-1/CORRELAZIONE: ok
+[gen] 303/360 grande/p3_cot/P1-2: ok
+[gen] 304/360 grande/p3_cot/P1-3: ok
+[gen] 305/360 grande/p3_cot/P1-1: ok
+[gen] 306/360 grande/p3_cot/P2-1: ok
+[gen] 307/360 grande/p3_cot/P2-3: ok
+[gen] 308/360 grande/p3_cot/P3-1/IN: ok
+[gen] 309/360 grande/p3_cot/P3-2/JOIN: ok
+[gen] 310/360 grande/p3_cot/P3-1/INTERSECT: ok
+[gen] 311/360 grande/p3_cot/P3-2/IN: ok
+[gen] 312/360 grande/p3_cot/P3-1/JOIN: ok
+[gen] 313/360 grande/p3_cot/P3-3/JOIN: ok
+[gen] 314/360 grande/p3_cot/P3-3/IN: ok
+[gen] 315/360 grande/p3_cot/P3-2/INTERSECT: ok
+[gen] 316/360 grande/p3_cot/P2-2: ok
+[gen] 317/360 grande/p3_cot/P3-3/INTERSECT: ok
+[gen] 318/360 grande/p3_cot/P4-3: ok
+[gen] 319/360 grande/p3_cot/P4-2: ok
+[gen] 320/360 grande/p3_cot/P5-2/NOT IN: ok
+[gen] 321/360 grande/p3_cot/P5-2/EXCEPT: ok
+[gen] 322/360 grande/p3_cot/P4-1: ok
+[gen] 323/360 grande/p3_cot/P5-3/NOT IN: ok
+[gen] 324/360 grande/p3_cot/P5-3/EXCEPT: ok
+[gen] 325/360 grande/p3_cot/P6-1/CTE: ok
+[gen] 326/360 grande/p3_cot/P6-1/CORRELAZIONE: ok
+[gen] 327/360 grande/p3_cot/P6-3/CTE: ok
+[gen] 328/360 grande/p3_cot/P6-2/CTE: ok
+[gen] 329/360 grande/p4_fewshot/P0-1: ok
+[gen] 330/360 grande/p4_fewshot/P0-2: ok
+[gen] 331/360 grande/p3_cot/P6-3/CORRELAZIONE: ok
+[gen] 332/360 grande/p4_fewshot/P1-1: ok
+[gen] 333/360 grande/p4_fewshot/P1-2: ok
+[gen] 334/360 grande/p4_fewshot/P2-1: ok
+[gen] 335/360 grande/p4_fewshot/P2-2: ok
+[gen] 336/360 grande/p4_fewshot/P3-1/INTERSECT: ok
+[gen] 337/360 grande/p4_fewshot/P3-1/IN: ok
+[gen] 338/360 grande/p4_fewshot/P1-3: ok
+[gen] 339/360 grande/p4_fewshot/P3-2/INTERSECT: ok
+[gen] 340/360 grande/p4_fewshot/P3-1/JOIN: ok
+[gen] 341/360 grande/p4_fewshot/P3-3/IN: ok
+[gen] 342/360 grande/p4_fewshot/P3-2/IN: ok
+[gen] 343/360 grande/p4_fewshot/P3-2/JOIN: ok
+[gen] 344/360 grande/p4_fewshot/P3-3/JOIN: ok
+[gen] 345/360 grande/p3_cot/P6-2/CORRELAZIONE: ok
+[gen] 346/360 grande/p4_fewshot/P4-1: ok
+[gen] 347/360 grande/p4_fewshot/P3-3/INTERSECT: ok
+[gen] 348/360 grande/p4_fewshot/P5-2/NOT IN: ok
+[gen] 349/360 grande/p4_fewshot/P5-2/EXCEPT: ok
+[gen] 350/360 grande/p4_fewshot/P2-3: ok
+[gen] 351/360 grande/p4_fewshot/P4-3: ok
+[gen] 352/360 grande/p4_fewshot/P4-2: ok
+[gen] 353/360 grande/p4_fewshot/P5-3/NOT IN: ok
+[gen] 354/360 grande/p4_fewshot/P5-3/EXCEPT: ok
+[gen] 355/360 grande/p4_fewshot/P6-3/CTE: ok
+[gen] 356/360 grande/p4_fewshot/P6-1/CTE: ok
+[gen] 357/360 grande/p4_fewshot/P6-1/CORRELAZIONE: ok
+[gen] 358/360 grande/p4_fewshot/P6-3/CORRELAZIONE: ok
+[gen] 359/360 grande/p4_fewshot/P6-2/CTE: ok
+[gen] 360/360 grande/p4_fewshot/P6-2/CORRELAZIONE: ok
+[judge] da fare: 360 (già fatti: 36, saltati perché la chiamata al modello è fallita: 0)
+[judge] 1/360 piccolo/p1_schema/P2-1: esito=0 (esecuzione diversa)
+[judge] 2/360 piccolo/p1_schema/P0-2: esito=1 (esecuzione uguale)
+[judge] 3/360 piccolo/p1_schema/P1-1: esito=1 (esecuzione uguale)
+[judge] 4/360 piccolo/p1_schema/P1-3: esito=1 (esecuzione uguale)
+[judge] 5/360 piccolo/p1_schema/P2-2: esito=1 (esecuzione uguale)
+[judge] 6/360 piccolo/p1_schema/P1-2: esito=1 (esecuzione uguale)
+[judge] 7/360 piccolo/p1_schema/P2-3: esito=1 (esecuzione uguale)
+[judge] 8/360 piccolo/p1_schema/P0-1: esito=1 (esecuzione uguale)
+[judge] 9/360 piccolo/p1_schema/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 10/360 piccolo/p1_schema/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 11/360 piccolo/p1_schema/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 12/360 piccolo/p1_schema/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 13/360 piccolo/p1_schema/P4-2: esito=1 (esecuzione uguale)
+[judge] 14/360 piccolo/p1_schema/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 15/360 piccolo/p1_schema/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 16/360 piccolo/p1_schema/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 17/360 piccolo/p1_schema/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 18/360 piccolo/p1_schema/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 19/360 piccolo/p1_schema/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 20/360 piccolo/p1_schema/P4-1: esito=1 (esecuzione uguale)
+[judge] 21/360 piccolo/p1_schema/P4-3: esito=1 (esecuzione uguale)
+[judge] 22/360 piccolo/p1_schema/P3-1/IN: esito=0 (esecuzione diversa)
+[judge] 23/360 piccolo/p1_schema/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 24/360 piccolo/p1_schema/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 25/360 piccolo/p2_schema_descrizioni/P0-2: esito=1 (esecuzione uguale)
+[judge] 26/360 piccolo/p1_schema/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 27/360 piccolo/p1_schema/P6-2/CTE: esito=0 (esecuzione diversa)
+[judge] 28/360 piccolo/p1_schema/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 29/360 piccolo/p1_schema/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 30/360 piccolo/p2_schema_descrizioni/P0-1: esito=1 (esecuzione uguale)
+[judge] 31/360 piccolo/p1_schema/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 32/360 piccolo/p2_schema_descrizioni/P2-1: esito=1 (esecuzione uguale)
+[judge] 33/360 piccolo/p2_schema_descrizioni/P1-3: esito=1 (esecuzione uguale)
+[judge] 34/360 piccolo/p2_schema_descrizioni/P2-3: esito=1 (esecuzione uguale)
+[judge] 35/360 piccolo/p2_schema_descrizioni/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 36/360 piccolo/p2_schema_descrizioni/P1-2: esito=1 (esecuzione uguale)
+[judge] 37/360 piccolo/p2_schema_descrizioni/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 38/360 piccolo/p1_schema/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 39/360 piccolo/p2_schema_descrizioni/P1-1: esito=1 (esecuzione uguale)
+[judge] 40/360 piccolo/p2_schema_descrizioni/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 41/360 piccolo/p2_schema_descrizioni/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 42/360 piccolo/p2_schema_descrizioni/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 43/360 piccolo/p2_schema_descrizioni/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 44/360 piccolo/p2_schema_descrizioni/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 45/360 piccolo/p2_schema_descrizioni/P4-2: esito=1 (esecuzione uguale)
+[judge] 46/360 piccolo/p2_schema_descrizioni/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 47/360 piccolo/p2_schema_descrizioni/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 48/360 piccolo/p2_schema_descrizioni/P4-3: esito=1 (esecuzione uguale)
+[judge] 49/360 piccolo/p2_schema_descrizioni/P2-2: esito=1 (esecuzione uguale)
+[judge] 50/360 piccolo/p2_schema_descrizioni/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 51/360 piccolo/p2_schema_descrizioni/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 52/360 piccolo/p2_schema_descrizioni/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 53/360 piccolo/p2_schema_descrizioni/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 54/360 piccolo/p2_schema_descrizioni/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 55/360 piccolo/p3_cot/P0-1: esito=1 (esecuzione uguale)
+[judge] 56/360 piccolo/p2_schema_descrizioni/P6-2/CTE: esito=0 (esecuzione diversa)
+[judge] 57/360 piccolo/p3_cot/P0-2: esito=1 (esecuzione uguale)
+[judge] 58/360 piccolo/p2_schema_descrizioni/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 59/360 piccolo/p2_schema_descrizioni/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 60/360 piccolo/p2_schema_descrizioni/P4-1: esito=0 (esecuzione diversa)
+[judge] 61/360 piccolo/p3_cot/P1-2: esito=0 (esecuzione diversa)
+[judge] 62/360 piccolo/p3_cot/P1-1: esito=1 (esecuzione uguale)
+[judge] 63/360 piccolo/p2_schema_descrizioni/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 64/360 piccolo/p3_cot/P2-2: esito=1 (esecuzione uguale)
+[judge] 65/360 piccolo/p3_cot/P2-3: esito=1 (esecuzione uguale)
+[judge] 66/360 piccolo/p3_cot/P2-1: esito=1 (esecuzione uguale)
+[judge] 67/360 piccolo/p3_cot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 68/360 piccolo/p3_cot/P1-3: esito=1 (esecuzione uguale)
+[judge] 69/360 piccolo/p3_cot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 70/360 piccolo/p3_cot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 71/360 piccolo/p3_cot/P3-1/JOIN: esito=0 (esecuzione diversa)
+[judge] 72/360 piccolo/p3_cot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 73/360 piccolo/p3_cot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 74/360 piccolo/p3_cot/P4-1: esito=1 (esecuzione uguale)
+[judge] 75/360 piccolo/p3_cot/P4-2: esito=1 (esecuzione uguale)
+[judge] 76/360 piccolo/p3_cot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 77/360 piccolo/p3_cot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 78/360 piccolo/p3_cot/P3-3/INTERSECT: esito=0 (esecuzione diversa)
+[judge] 79/360 piccolo/p3_cot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 80/360 piccolo/p3_cot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 81/360 piccolo/p3_cot/P5-3/NOT IN: esito=0 (esecuzione diversa)
+[judge] 82/360 piccolo/p3_cot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 83/360 piccolo/p3_cot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 84/360 piccolo/p3_cot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 85/360 piccolo/p3_cot/P4-3: esito=1 (esecuzione uguale)
+[judge] 86/360 piccolo/p3_cot/P6-2/CTE: esito=0 (esecuzione diversa)
+[judge] 87/360 piccolo/p4_fewshot/P0-1: esito=1 (esecuzione uguale)
+[judge] 88/360 piccolo/p3_cot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 89/360 piccolo/p4_fewshot/P0-2: esito=1 (esecuzione uguale)
+[judge] 90/360 piccolo/p4_fewshot/P1-3: esito=1 (esecuzione uguale)
+[judge] 91/360 piccolo/p3_cot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 92/360 piccolo/p4_fewshot/P1-1: esito=1 (esecuzione uguale)
+[judge] 93/360 piccolo/p4_fewshot/P1-2: esito=1 (esecuzione uguale)
+[judge] 94/360 piccolo/p4_fewshot/P2-1: esito=1 (esecuzione uguale)
+[judge] 95/360 piccolo/p4_fewshot/P2-3: esito=1 (esecuzione uguale)
+[judge] 96/360 piccolo/p4_fewshot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 97/360 piccolo/p4_fewshot/P2-2: esito=1 (esecuzione uguale)
+[judge] 98/360 piccolo/p4_fewshot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 99/360 piccolo/p4_fewshot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 100/360 piccolo/p4_fewshot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 101/360 piccolo/p4_fewshot/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 102/360 piccolo/p2_schema_descrizioni/P6-2/CORRELAZIONE: esito=0 (esecuzione diversa)
+[judge] 103/360 piccolo/p4_fewshot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 104/360 piccolo/p4_fewshot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 105/360 piccolo/p3_cot/P6-2/CORRELAZIONE: esito=0 (esecuzione diversa)
+[judge] 106/360 piccolo/p4_fewshot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 107/360 piccolo/p4_fewshot/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 108/360 piccolo/p4_fewshot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 109/360 piccolo/p4_fewshot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 110/360 piccolo/p4_fewshot/P4-1: esito=1 (esecuzione uguale)
+[judge] 111/360 piccolo/p4_fewshot/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 112/360 medio/p1_schema/P0-1: esito=1 (esecuzione uguale)
+[judge] 113/360 medio/p1_schema/P0-2: esito=1 (esecuzione uguale)
+[judge] 114/360 piccolo/p4_fewshot/P4-2: esito=1 (esecuzione uguale)
+[judge] 115/360 medio/p1_schema/P1-1: esito=1 (esecuzione uguale)
+[judge] 116/360 piccolo/p4_fewshot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 117/360 medio/p1_schema/P1-2: esito=1 (esecuzione uguale)
+[judge] 118/360 medio/p1_schema/P1-3: esito=1 (esecuzione uguale)
+[judge] 119/360 medio/p1_schema/P2-2: esito=1 (esecuzione uguale)
+[judge] 120/360 piccolo/p4_fewshot/P4-3: esito=1 (esecuzione uguale)
+[judge] 121/360 medio/p1_schema/P2-3: esito=1 (esecuzione uguale)
+[judge] 122/360 medio/p1_schema/P3-1/JOIN: esito=0 (esecuzione diversa)
+[judge] 123/360 piccolo/p4_fewshot/P6-2/CTE: esito=0 (esecuzione diversa)
+[judge] 124/360 medio/p1_schema/P2-1: esito=1 (esecuzione uguale)
+[judge] 125/360 medio/p1_schema/P3-1/IN: esito=0 (esecuzione uguale)
+[judge] 126/360 medio/p1_schema/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 127/360 medio/p1_schema/P3-2/JOIN: esito=0 (esecuzione diversa)
+[judge] 128/360 piccolo/p4_fewshot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 129/360 medio/p1_schema/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 130/360 medio/p1_schema/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 131/360 piccolo/p4_fewshot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 132/360 medio/p1_schema/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 133/360 medio/p1_schema/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 134/360 medio/p1_schema/P4-3: esito=1 (esecuzione uguale)
+[judge] 135/360 medio/p1_schema/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 136/360 medio/p1_schema/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 137/360 piccolo/p4_fewshot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 138/360 medio/p1_schema/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 139/360 medio/p1_schema/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 140/360 medio/p1_schema/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 141/360 medio/p1_schema/P4-1: esito=1 (esecuzione uguale)
+[judge] 142/360 medio/p1_schema/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 143/360 medio/p1_schema/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 144/360 medio/p1_schema/P4-2: esito=1 (esecuzione uguale)
+[judge] 145/360 medio/p2_schema_descrizioni/P0-1: esito=1 (esecuzione uguale)
+[judge] 146/360 medio/p1_schema/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 147/360 medio/p2_schema_descrizioni/P1-1: esito=1 (esecuzione uguale)
+[judge] 148/360 medio/p1_schema/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 149/360 medio/p1_schema/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 150/360 medio/p1_schema/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 151/360 medio/p2_schema_descrizioni/P0-2: esito=1 (esecuzione uguale)
+[judge] 152/360 medio/p2_schema_descrizioni/P1-2: esito=1 (esecuzione uguale)
+[judge] 153/360 medio/p2_schema_descrizioni/P3-1/JOIN: esito=0 (esecuzione diversa)
+[judge] 154/360 medio/p2_schema_descrizioni/P1-3: esito=1 (esecuzione uguale)
+[judge] 155/360 medio/p2_schema_descrizioni/P2-1: esito=1 (esecuzione uguale)
+[judge] 156/360 medio/p2_schema_descrizioni/P2-3: esito=1 (esecuzione uguale)
+[judge] 157/360 medio/p2_schema_descrizioni/P2-2: esito=1 (esecuzione uguale)
+[judge] 158/360 medio/p2_schema_descrizioni/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 159/360 medio/p2_schema_descrizioni/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 160/360 medio/p2_schema_descrizioni/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 161/360 medio/p2_schema_descrizioni/P3-1/IN: esito=0 (esecuzione uguale)
+[judge] 162/360 medio/p2_schema_descrizioni/P3-2/JOIN: esito=0 (esecuzione diversa)
+[judge] 163/360 medio/p2_schema_descrizioni/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 164/360 medio/p2_schema_descrizioni/P4-3: esito=1 (esecuzione uguale)
+[judge] 165/360 medio/p2_schema_descrizioni/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 166/360 medio/p2_schema_descrizioni/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 167/360 medio/p2_schema_descrizioni/P4-1: esito=1 (esecuzione uguale)
+[judge] 168/360 medio/p2_schema_descrizioni/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 169/360 medio/p2_schema_descrizioni/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 170/360 medio/p2_schema_descrizioni/P4-2: esito=1 (esecuzione uguale)
+[judge] 171/360 medio/p2_schema_descrizioni/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 172/360 medio/p2_schema_descrizioni/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 173/360 medio/p2_schema_descrizioni/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 174/360 piccolo/p4_fewshot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 175/360 medio/p2_schema_descrizioni/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 176/360 medio/p2_schema_descrizioni/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 177/360 medio/p2_schema_descrizioni/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 178/360 medio/p2_schema_descrizioni/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 179/360 medio/p3_cot/P0-2: esito=1 (esecuzione uguale)
+[judge] 180/360 medio/p2_schema_descrizioni/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 181/360 medio/p3_cot/P0-1: esito=1 (esecuzione uguale)
+[judge] 182/360 medio/p3_cot/P1-1: esito=1 (esecuzione uguale)
+[judge] 183/360 medio/p3_cot/P2-3: esito=1 (esecuzione uguale)
+[judge] 184/360 medio/p3_cot/P2-1: esito=1 (esecuzione uguale)
+[judge] 185/360 medio/p3_cot/P1-2: esito=1 (esecuzione uguale)
+[judge] 186/360 medio/p3_cot/P1-3: esito=1 (esecuzione uguale)
+[judge] 187/360 medio/p3_cot/P2-2: esito=1 (esecuzione uguale)
+[judge] 188/360 medio/p3_cot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 189/360 medio/p3_cot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 190/360 medio/p3_cot/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 191/360 medio/p3_cot/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 192/360 medio/p3_cot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 193/360 medio/p3_cot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 194/360 medio/p3_cot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 195/360 medio/p3_cot/P4-1: esito=1 (esecuzione uguale)
+[judge] 196/360 medio/p3_cot/P4-2: esito=1 (esecuzione uguale)
+[judge] 197/360 medio/p3_cot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 198/360 medio/p3_cot/P4-3: esito=1 (esecuzione uguale)
+[judge] 199/360 medio/p3_cot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 200/360 medio/p3_cot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 201/360 medio/p3_cot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 202/360 medio/p3_cot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 203/360 medio/p3_cot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 204/360 medio/p3_cot/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 205/360 medio/p3_cot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 206/360 medio/p4_fewshot/P0-1: esito=1 (esecuzione uguale)
+[judge] 207/360 medio/p3_cot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 208/360 medio/p3_cot/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 209/360 medio/p3_cot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 210/360 medio/p4_fewshot/P1-3: esito=1 (esecuzione uguale)
+[judge] 211/360 medio/p4_fewshot/P0-2: esito=1 (esecuzione uguale)
+[judge] 212/360 medio/p4_fewshot/P1-1: esito=1 (esecuzione uguale)
+[judge] 213/360 medio/p4_fewshot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 214/360 medio/p3_cot/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 215/360 medio/p4_fewshot/P1-2: esito=1 (esecuzione uguale)
+[judge] 216/360 medio/p4_fewshot/P2-3: esito=1 (esecuzione uguale)
+[judge] 217/360 medio/p4_fewshot/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 218/360 medio/p4_fewshot/P2-1: esito=1 (esecuzione uguale)
+[judge] 219/360 medio/p4_fewshot/P2-2: esito=1 (esecuzione uguale)
+[judge] 220/360 medio/p4_fewshot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 221/360 medio/p4_fewshot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 222/360 medio/p4_fewshot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 223/360 medio/p4_fewshot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 224/360 medio/p4_fewshot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 225/360 medio/p4_fewshot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 226/360 medio/p4_fewshot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 227/360 medio/p4_fewshot/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 228/360 medio/p4_fewshot/P4-1: esito=1 (esecuzione uguale)
+[judge] 229/360 medio/p4_fewshot/P4-2: esito=1 (esecuzione uguale)
+[judge] 230/360 medio/p4_fewshot/P4-3: esito=0 (esecuzione diversa)
+[judge] 231/360 medio/p4_fewshot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 232/360 medio/p4_fewshot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 233/360 medio/p4_fewshot/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 234/360 medio/p4_fewshot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 235/360 medio/p4_fewshot/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 236/360 medio/p4_fewshot/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 237/360 medio/p4_fewshot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 238/360 grande/p1_schema/P0-1: esito=1 (esecuzione uguale)
+[judge] 239/360 medio/p4_fewshot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 240/360 medio/p4_fewshot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 241/360 grande/p1_schema/P0-2: esito=1 (esecuzione uguale)
+[judge] 242/360 grande/p1_schema/P1-1: esito=1 (esecuzione uguale)
+[judge] 243/360 piccolo/p4_fewshot/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 244/360 grande/p1_schema/P2-1: esito=1 (esecuzione uguale)
+[judge] 245/360 grande/p1_schema/P1-2: esito=1 (esecuzione uguale)
+[judge] 246/360 grande/p1_schema/P1-3: esito=1 (esecuzione uguale)
+[judge] 247/360 grande/p1_schema/P2-3: esito=1 (esecuzione uguale)
+[judge] 248/360 grande/p1_schema/P2-2: esito=1 (esecuzione uguale)
+[judge] 249/360 grande/p1_schema/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 250/360 grande/p1_schema/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 251/360 grande/p1_schema/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 252/360 grande/p1_schema/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 253/360 grande/p1_schema/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 254/360 grande/p1_schema/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 255/360 grande/p1_schema/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 256/360 grande/p1_schema/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 257/360 grande/p1_schema/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 258/360 grande/p1_schema/P4-2: esito=1 (esecuzione uguale)
+[judge] 259/360 grande/p1_schema/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 260/360 grande/p1_schema/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 261/360 grande/p1_schema/P4-1: esito=1 (esecuzione uguale)
+[judge] 262/360 grande/p1_schema/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 263/360 grande/p1_schema/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 264/360 grande/p1_schema/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 265/360 grande/p1_schema/P4-3: esito=1 (esecuzione uguale)
+[judge] 266/360 grande/p1_schema/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 267/360 grande/p1_schema/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 268/360 grande/p2_schema_descrizioni/P0-1: esito=1 (esecuzione uguale)
+[judge] 269/360 grande/p1_schema/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 270/360 grande/p1_schema/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 271/360 grande/p2_schema_descrizioni/P1-2: esito=1 (esecuzione uguale)
+[judge] 272/360 grande/p1_schema/P6-2/CORRELAZIONE: esito=0 (esecuzione diversa)
+[judge] 273/360 grande/p2_schema_descrizioni/P1-1: esito=1 (esecuzione uguale)
+[judge] 274/360 grande/p2_schema_descrizioni/P2-2: esito=1 (esecuzione uguale)
+[judge] 275/360 grande/p2_schema_descrizioni/P1-3: esito=1 (esecuzione uguale)
+[judge] 276/360 grande/p2_schema_descrizioni/P0-2: esito=1 (esecuzione uguale)
+[judge] 277/360 grande/p2_schema_descrizioni/P2-1: esito=1 (esecuzione uguale)
+[judge] 278/360 grande/p2_schema_descrizioni/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 279/360 grande/p2_schema_descrizioni/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 280/360 grande/p2_schema_descrizioni/P2-3: esito=0 (esecuzione diversa)
+[judge] 281/360 grande/p2_schema_descrizioni/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 282/360 grande/p2_schema_descrizioni/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 283/360 grande/p2_schema_descrizioni/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 284/360 grande/p2_schema_descrizioni/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 285/360 grande/p2_schema_descrizioni/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 286/360 grande/p2_schema_descrizioni/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 287/360 grande/p2_schema_descrizioni/P4-1: esito=1 (esecuzione uguale)
+[judge] 288/360 grande/p2_schema_descrizioni/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 289/360 grande/p2_schema_descrizioni/P4-2: esito=1 (esecuzione uguale)
+[judge] 290/360 grande/p2_schema_descrizioni/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 291/360 grande/p2_schema_descrizioni/P4-3: esito=1 (esecuzione uguale)
+[judge] 292/360 grande/p2_schema_descrizioni/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 293/360 grande/p2_schema_descrizioni/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 294/360 grande/p2_schema_descrizioni/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 295/360 grande/p2_schema_descrizioni/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 296/360 grande/p2_schema_descrizioni/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 297/360 grande/p2_schema_descrizioni/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 298/360 grande/p2_schema_descrizioni/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 299/360 grande/p3_cot/P0-1: esito=1 (esecuzione uguale)
+[judge] 300/360 grande/p2_schema_descrizioni/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 301/360 grande/p3_cot/P0-2: esito=1 (esecuzione uguale)
+[judge] 302/360 grande/p2_schema_descrizioni/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 303/360 grande/p3_cot/P1-3: esito=1 (esecuzione uguale)
+[judge] 304/360 grande/p3_cot/P1-2: esito=1 (esecuzione uguale)
+[judge] 305/360 grande/p3_cot/P1-1: esito=1 (esecuzione uguale)
+[judge] 306/360 grande/p3_cot/P2-1: esito=1 (esecuzione uguale)
+[judge] 307/360 grande/p3_cot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 308/360 grande/p3_cot/P2-3: esito=1 (esecuzione uguale)
+[judge] 309/360 grande/p3_cot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 310/360 grande/p3_cot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 311/360 grande/p3_cot/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 312/360 grande/p3_cot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 313/360 grande/p3_cot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 314/360 grande/p3_cot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 315/360 grande/p3_cot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 316/360 grande/p3_cot/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 317/360 grande/p3_cot/P2-2: esito=1 (esecuzione uguale)
+[judge] 318/360 grande/p3_cot/P4-2: esito=1 (esecuzione uguale)
+[judge] 319/360 grande/p3_cot/P4-1: esito=1 (esecuzione uguale)
+[judge] 320/360 grande/p3_cot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 321/360 grande/p3_cot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 322/360 grande/p3_cot/P4-3: esito=1 (esecuzione uguale)
+[judge] 323/360 grande/p3_cot/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 324/360 grande/p3_cot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 325/360 grande/p3_cot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 326/360 grande/p3_cot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 327/360 grande/p3_cot/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 328/360 grande/p4_fewshot/P0-1: esito=1 (esecuzione uguale)
+[judge] 329/360 grande/p4_fewshot/P0-2: esito=1 (esecuzione uguale)
+[judge] 330/360 grande/p3_cot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 331/360 grande/p3_cot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 332/360 grande/p4_fewshot/P1-2: esito=1 (esecuzione uguale)
+[judge] 333/360 grande/p4_fewshot/P1-1: esito=1 (esecuzione uguale)
+[judge] 334/360 grande/p4_fewshot/P2-1: esito=1 (esecuzione uguale)
+[judge] 335/360 grande/p4_fewshot/P3-1/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 336/360 grande/p4_fewshot/P2-2: esito=1 (esecuzione uguale)
+[judge] 337/360 grande/p4_fewshot/P3-1/IN: esito=1 (esecuzione uguale)
+[judge] 338/360 grande/p4_fewshot/P3-2/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 339/360 grande/p4_fewshot/P3-2/JOIN: esito=1 (esecuzione uguale)
+[judge] 340/360 grande/p4_fewshot/P1-3: esito=1 (esecuzione uguale)
+[judge] 341/360 grande/p4_fewshot/P3-1/JOIN: esito=1 (esecuzione uguale)
+[judge] 342/360 grande/p4_fewshot/P3-2/IN: esito=1 (esecuzione uguale)
+[judge] 343/360 grande/p4_fewshot/P3-3/IN: esito=1 (esecuzione uguale)
+[judge] 344/360 grande/p3_cot/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 345/360 grande/p4_fewshot/P3-3/JOIN: esito=1 (esecuzione uguale)
+[judge] 346/360 grande/p4_fewshot/P3-3/INTERSECT: esito=1 (esecuzione uguale)
+[judge] 347/360 grande/p4_fewshot/P4-1: esito=1 (esecuzione uguale)
+[judge] 348/360 grande/p4_fewshot/P5-2/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 349/360 grande/p4_fewshot/P5-2/NOT IN: esito=1 (esecuzione uguale)
+[judge] 350/360 grande/p4_fewshot/P2-3: esito=1 (esecuzione uguale)
+[judge] 351/360 grande/p4_fewshot/P4-3: esito=1 (esecuzione uguale)
+[judge] 352/360 grande/p4_fewshot/P5-3/NOT IN: esito=1 (esecuzione uguale)
+[judge] 353/360 grande/p4_fewshot/P4-2: esito=1 (esecuzione uguale)
+[judge] 354/360 grande/p4_fewshot/P6-3/CTE: esito=1 (esecuzione uguale)
+[judge] 355/360 grande/p4_fewshot/P6-3/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 356/360 grande/p4_fewshot/P6-1/CTE: esito=1 (esecuzione uguale)
+[judge] 357/360 grande/p4_fewshot/P6-2/CTE: esito=1 (esecuzione uguale)
+[judge] 358/360 grande/p4_fewshot/P6-1/CORRELAZIONE: esito=1 (esecuzione uguale)
+[judge] 359/360 grande/p4_fewshot/P5-3/EXCEPT: esito=1 (esecuzione uguale)
+[judge] 360/360 grande/p4_fewshot/P6-2/CORRELAZIONE: esito=1 (esecuzione uguale)

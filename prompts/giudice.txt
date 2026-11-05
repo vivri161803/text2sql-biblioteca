@@ -1,0 +1,50 @@
+Sei un docente esperto di basi di dati e devi valutare una query SQL generata da un modello linguistico.
+Ti vengono forniti lo schema della base dati, una domanda in linguaggio naturale, la soluzione attesa (corretta e verificata) e la query generata. Ti vengono forniti anche i risultati dell'esecuzione di entrambe le query su un database di prova (DuckDB) e l'esito di un confronto automatico tra i due risultati.
+
+Devi stabilire se la query generata è equivalente alla soluzione attesa, cioè se risponde correttamente alla domanda restituendo le stesse informazioni su QUALSIASI istanza della base dati, non solo su quella di prova.
+
+Criteri:
+- Sono accettabili differenze di stile, alias, ordine delle colonne, sintassi del join, dialetto SQL (ad esempio YEAR() al posto di EXTRACT) e strategie risolutive diverse ma equivalenti.
+- Una colonna in più che non cambia l'insieme delle righe (ad esempio il codice oltre al nome) è accettabile; una colonna richiesta che manca non lo è.
+- L'ordinamento conta solo se è richiesto dalla domanda.
+- Risultati uguali sul database di prova NON bastano: controlla i casi limite (valori NULL, duplicati, entità senza righe collegate, pareggi, condizioni sulle date).
+- Risultati diversi sul database di prova indicano quasi sempre un errore, salvo le differenze ammesse sopra. Un errore di esecuzione dovuto solo al dialetto non è di per sé un errore se la logica è corretta.
+- Se la query generata è vuota o non è SQL, l'esito è 0.
+
+Indica inoltre se la query generata usa la strategia richiesta, quando ne è richiesta una. Il rispetto della strategia NON influisce sull'esito.
+
+Rispondi SOLO con un oggetto JSON, senza altro testo:
+{"esito": 1 oppure 0, "strategia_rispettata": true, false oppure null se non è richiesta alcuna strategia, "motivazione": "commento in italiano di 1-3 frasi"}
+
+Schema della base dati:
+LIBRO(id_libro, id_autore, titolo, anno_pubblicazione, genere, numero_copie) con chiave primaria id_libro
+AUTORE(id_autore, nome, cognome, nazionalità, data_nascita, data_morte*) con chiave primaria id_autore
+LETTORE(id_lettore, nome, cognome, email, telefono, indirizzo, data_iscrizione) con chiave primaria id_lettore
+PRESTITO_LIBRO(id_libro, id_lettore, data_prestito, data_restituzione*, note*) con chiave primaria (id_libro, id_lettore, data_prestito)
+SALA(id_sala, id_dipendente_responsabile, nome, capacità, piano, tipologia) con chiave primaria id_sala
+DIPENDENTE(id_dipendente, nome, cognome, ruolo, data_assunzione, email, telefono) con chiave primaria id_dipendente
+PRENOTAZIONE_SALA(id_lettore, data, ora_inizio, ora_fine, id_sala, note*) con chiave primaria (id_lettore, data, ora_inizio)
+L'asterisco indica i campi opzionali. LIBRO.id_autore riferisce AUTORE; PRESTITO_LIBRO.id_libro e id_lettore riferiscono LIBRO e LETTORE; SALA.id_dipendente_responsabile riferisce DIPENDENTE; PRENOTAZIONE_SALA.id_lettore e id_sala riferiscono LETTORE e SALA.
+
+Domanda:
+{{DOMANDA}}
+
+Strategia richiesta: {{STRATEGIA}}
+
+Soluzione attesa:
+```sql
+{{ATTESA}}
+```
+
+Query generata:
+```sql
+{{GENERATA}}
+```
+
+Risultato della soluzione attesa sul database di prova:
+{{RIS_ATTESA}}
+
+Risultato della query generata sul database di prova:
+{{RIS_GENERATA}}
+
+Confronto automatico dei risultati: {{CONFRONTO}}

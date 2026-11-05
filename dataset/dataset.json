@@ -1,0 +1,198 @@
+{
+  "fonti": {
+    "POLITO_P1": "https://dbdmg.polito.it/dbdmg_web/wp-content/uploads/2024/04/EserciziSQL-parte1_sol.pdf",
+    "POLITO_P2": "https://dbdmg.polito.it/dbdmg_web/wp-content/uploads/2024/05/EserciziSQL-parte2_sol.pdf",
+    "POLITO_SLIDE": "https://dbdmg.polito.it/wordpress/wp-content/uploads/2016/04/02EserciziSQLIN-NOT-IN-GROUPBYx2.pdf",
+    "UNIBG": "https://cs.unibg.it/abbadini/bd_22-23/soluzioni_sql_exe_4.pdf",
+    "UNIPR": "https://www.ce.unipr.it/people/cagnoni/didattica/basidati/testi_esame/bd180209.pdf",
+    "W3RESOURCE": "https://w3resource.com/projects/sql/sql-projects-on-library-management-system.php"
+  },
+  "pattern": {
+    "0": "Proiezione",
+    "1": "Join",
+    "2": "Raggruppamento con condizione e funzione aggregata",
+    "3": "Soluzioni multiple Join/IN/INTERSECT",
+    "4": "Divisione",
+    "5": "Soluzioni multiple NOT IN/EXCEPT",
+    "6": "Soluzioni multiple CTE/Correlazione"
+  },
+  "domande": [
+    {
+      "id": "P0-1", "pattern": 0,
+      "domanda": "Mostra il titolo, il genere e l'anno di pubblicazione dei libri pubblicati dopo il 2000, ordinati per anno di pubblicazione crescente.",
+      "fonte": "W3RESOURCE", "fonte_esercizio": "Query-7: libri pubblicati dopo un certo anno (WHERE published_year > 2000)",
+      "adattamento": "Tabella Books → LIBRO; aggiunti genere e ORDER BY.",
+      "soluzioni": {"-": "SELECT titolo, genere, anno_pubblicazione\nFROM LIBRO\nWHERE anno_pubblicazione > 2000\nORDER BY anno_pubblicazione ASC;"}
+    },
+    {
+      "id": "P0-2", "pattern": 0,
+      "domanda": "Mostra il codice del libro, il codice del lettore e la data di prestito dei prestiti non ancora restituiti, ordinati dal prestito meno recente al più recente.",
+      "fonte": "W3RESOURCE", "fonte_esercizio": "Query-15: libri prestati ma non ancora restituiti (return_date IS NULL)",
+      "adattamento": "Ridotta alla sola tabella PRESTITO_LIBRO (niente join) per restare nel pattern Proiezione; aggiunto ORDER BY.",
+      "soluzioni": {"-": "SELECT id_libro, id_lettore, data_prestito\nFROM PRESTITO_LIBRO\nWHERE data_restituzione IS NULL\nORDER BY data_prestito ASC;"}
+    },
+    {
+      "id": "P0-3", "pattern": 0,
+      "domanda": "Mostra nome, cognome e data di nascita degli autori di nazionalità “italiana” ancora in vita, ordinati dal più giovane al più anziano.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 1a: nome e data di nascita degli atleti italiani (selezione su Nazione)",
+      "adattamento": "ATLETA → AUTORE; la condizione sulle gare è sostituita da 'ancora in vita' (data_morte IS NULL); aggiunto ORDER BY.",
+      "soluzioni": {"-": "SELECT nome, cognome, data_nascita\nFROM AUTORE\nWHERE nazionalità = 'italiana' AND data_morte IS NULL\nORDER BY data_nascita DESC;"}
+    },
+    {
+      "id": "P1-1", "pattern": 1,
+      "domanda": "Mostra nome e cognome dei lettori che hanno preso in prestito il libro intitolato “Il nome della rosa”, insieme alla data di ciascun prestito.",
+      "fonte": "W3RESOURCE", "fonte_esercizio": "Query-9: membri che hanno preso in prestito un libro specifico (title = '1984')",
+      "adattamento": "Members/Borrowing/Books → LETTORE/PRESTITO_LIBRO/LIBRO.",
+      "soluzioni": {"-": "SELECT LE.nome, LE.cognome, P.data_prestito\nFROM PRESTITO_LIBRO P\nJOIN LIBRO L ON P.id_libro = L.id_libro\nJOIN LETTORE LE ON P.id_lettore = LE.id_lettore\nWHERE L.titolo = 'Il nome della rosa';"}
+    },
+    {
+      "id": "P1-2", "pattern": 1,
+      "domanda": "Mostra nome e cognome del lettore e titolo del libro per tutti i prestiti non ancora restituiti iniziati prima del 1° settembre 2026.",
+      "fonte": "W3RESOURCE", "fonte_esercizio": "Query-5: libri in ritardo (non restituiti e prestati da più di 14 giorni)",
+      "adattamento": "CURRENT_DATE - 14 giorni sostituito da una data fissa, così il risultato non dipende dal giorno di esecuzione.",
+      "soluzioni": {"-": "SELECT LE.nome, LE.cognome, L.titolo\nFROM PRESTITO_LIBRO P\nJOIN LETTORE LE ON P.id_lettore = LE.id_lettore\nJOIN LIBRO L ON P.id_libro = L.id_libro\nWHERE P.data_restituzione IS NULL\n  AND P.data_prestito < DATE '2026-09-01';"}
+    },
+    {
+      "id": "P1-3", "pattern": 1,
+      "domanda": "Mostra il titolo dei libri scritti da Umberto Eco che sono stati presi in prestito nel 2025, insieme alla data di ciascun prestito.",
+      "fonte": "UNIPR", "fonte_esercizio": "Punto E: volumi di Umberto Eco prestati nell'ultimo mese e numero di prestiti",
+      "adattamento": "'Ultimo mese' → anno 2025; tolto il conteggio per restare nel pattern Join.",
+      "soluzioni": {"-": "SELECT L.titolo, P.data_prestito\nFROM AUTORE A\nJOIN LIBRO L ON A.id_autore = L.id_autore\nJOIN PRESTITO_LIBRO P ON P.id_libro = L.id_libro\nWHERE A.nome = 'Umberto' AND A.cognome = 'Eco'\n  AND P.data_prestito BETWEEN DATE '2025-01-01' AND DATE '2025-12-31';"}
+    },
+    {
+      "id": "P2-1", "pattern": 2,
+      "domanda": "Per ogni lettore che ha effettuato almeno 3 prestiti, mostra il codice, il nome e il cognome del lettore e il numero di prestiti effettuati.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Es. 1c (join, group by): per ogni studente con media > 28, matricola, nome e voti; cfr. anche W3RESOURCE Query-12",
+      "adattamento": "STUDENTE/ESAME → LETTORE/PRESTITO_LIBRO; condizione HAVING sul conteggio dei prestiti.",
+      "soluzioni": {"-": "SELECT LE.id_lettore, LE.nome, LE.cognome, COUNT(*) AS num_prestiti\nFROM LETTORE LE\nJOIN PRESTITO_LIBRO P ON LE.id_lettore = P.id_lettore\nGROUP BY LE.id_lettore, LE.nome, LE.cognome\nHAVING COUNT(*) >= 3;"}
+    },
+    {
+      "id": "P2-2", "pattern": 2,
+      "domanda": "Per ogni lettore iscritto alla biblioteca dal 1° gennaio 2024 in poi che ha effettuato almeno 2 prenotazioni di sale, mostra il codice e il cognome del lettore, il numero di prenotazioni effettuate e il numero di sale diverse prenotate.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Es. 2d (join, group by): persone nate dopo il 1970 con almeno 5 lezioni, numero lezioni e numero istruttori diversi",
+      "adattamento": "PERSONA/LEZIONE_PRIVATA/ISTRUTTORE → LETTORE/PRENOTAZIONE_SALA/SALA; data di nascita → data di iscrizione.",
+      "soluzioni": {"-": "SELECT LE.id_lettore, LE.cognome, COUNT(*) AS num_prenotazioni, COUNT(DISTINCT PS.id_sala) AS num_sale\nFROM LETTORE LE\nJOIN PRENOTAZIONE_SALA PS ON LE.id_lettore = PS.id_lettore\nWHERE LE.data_iscrizione >= DATE '2024-01-01'\nGROUP BY LE.id_lettore, LE.cognome\nHAVING COUNT(*) >= 2;"}
+    },
+    {
+      "id": "P2-3", "pattern": 2,
+      "domanda": "Per ogni piano che ospita almeno 2 sale, mostra il piano, il numero di sale presenti, la capacità massima e la capacità media delle sale di quel piano.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Es. 4b (join, group by): per le città con almeno 100 contratti, costo massimo, costo medio e numero di contratti",
+      "adattamento": "Città/ALLOGGIO → piano/SALA; costo affitto → capacità.",
+      "soluzioni": {"-": "SELECT piano, COUNT(*) AS num_sale, MAX(capacità) AS capacita_max, AVG(capacità) AS capacita_media\nFROM SALA\nGROUP BY piano\nHAVING COUNT(*) >= 2;"}
+    },
+    {
+      "id": "P3-1", "pattern": 3,
+      "domanda": "Mostra il codice dei lettori che hanno preso in prestito sia almeno un libro di genere “fantasy” sia almeno un libro di genere “giallo”.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Query annidate es. 1a: orchestre che hanno tenuto concerti sia a Torino sia a Milano",
+      "adattamento": "Orchestre/città → lettori/generi dei libri presi in prestito.",
+      "soluzioni": {
+        "JOIN": "SELECT DISTINCT P1.id_lettore\nFROM PRESTITO_LIBRO P1\nJOIN LIBRO L1 ON P1.id_libro = L1.id_libro\nJOIN PRESTITO_LIBRO P2 ON P1.id_lettore = P2.id_lettore\nJOIN LIBRO L2 ON P2.id_libro = L2.id_libro\nWHERE L1.genere = 'fantasy' AND L2.genere = 'giallo';",
+        "IN": "SELECT id_lettore\nFROM LETTORE\nWHERE id_lettore IN (SELECT id_lettore FROM PRESTITO_LIBRO\n                     WHERE id_libro IN (SELECT id_libro FROM LIBRO WHERE genere = 'fantasy'))\n  AND id_lettore IN (SELECT id_lettore FROM PRESTITO_LIBRO\n                     WHERE id_libro IN (SELECT id_libro FROM LIBRO WHERE genere = 'giallo'));",
+        "INTERSECT": "SELECT P.id_lettore\nFROM PRESTITO_LIBRO P JOIN LIBRO L ON P.id_libro = L.id_libro\nWHERE L.genere = 'fantasy'\nINTERSECT\nSELECT P.id_lettore\nFROM PRESTITO_LIBRO P JOIN LIBRO L ON P.id_libro = L.id_libro\nWHERE L.genere = 'giallo';"
+      }
+    },
+    {
+      "id": "P3-2", "pattern": 3,
+      "domanda": "Mostra il codice e il nome delle sale che sono state prenotate sia nel mese di marzo 2026 sia nel mese di aprile 2026.",
+      "fonte": "POLITO_SLIDE", "fonte_esercizio": "Esercizio #1: orchestre che hanno tenuto concerti sia a Torino sia a Milano",
+      "adattamento": "Orchestre/città → sale/mesi di prenotazione.",
+      "soluzioni": {
+        "JOIN": "SELECT DISTINCT S.id_sala, S.nome\nFROM SALA S\nJOIN PRENOTAZIONE_SALA P1 ON S.id_sala = P1.id_sala\nJOIN PRENOTAZIONE_SALA P2 ON S.id_sala = P2.id_sala\nWHERE P1.data BETWEEN DATE '2026-03-01' AND DATE '2026-03-31'\n  AND P2.data BETWEEN DATE '2026-04-01' AND DATE '2026-04-30';",
+        "IN": "SELECT id_sala, nome\nFROM SALA\nWHERE id_sala IN (SELECT id_sala FROM PRENOTAZIONE_SALA\n                  WHERE data BETWEEN DATE '2026-03-01' AND DATE '2026-03-31')\n  AND id_sala IN (SELECT id_sala FROM PRENOTAZIONE_SALA\n                  WHERE data BETWEEN DATE '2026-04-01' AND DATE '2026-04-30');",
+        "INTERSECT": "SELECT S.id_sala, S.nome\nFROM SALA S JOIN PRENOTAZIONE_SALA P ON S.id_sala = P.id_sala\nWHERE P.data BETWEEN DATE '2026-03-01' AND DATE '2026-03-31'\nINTERSECT\nSELECT S.id_sala, S.nome\nFROM SALA S JOIN PRENOTAZIONE_SALA P ON S.id_sala = P.id_sala\nWHERE P.data BETWEEN DATE '2026-04-01' AND DATE '2026-04-30';"
+      }
+    },
+    {
+      "id": "P3-3", "pattern": 3,
+      "domanda": "Mostra il codice, il nome e il cognome degli autori che hanno scritto sia almeno un libro di genere “romanzo” sia almeno un libro di genere “saggio”.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Query annidate es. 1a: orchestre che hanno tenuto concerti sia a Torino sia a Milano",
+      "adattamento": "Orchestre/città → autori/generi dei libri scritti.",
+      "soluzioni": {
+        "JOIN": "SELECT DISTINCT A.id_autore, A.nome, A.cognome\nFROM AUTORE A\nJOIN LIBRO L1 ON A.id_autore = L1.id_autore\nJOIN LIBRO L2 ON A.id_autore = L2.id_autore\nWHERE L1.genere = 'romanzo' AND L2.genere = 'saggio';",
+        "IN": "SELECT id_autore, nome, cognome\nFROM AUTORE\nWHERE id_autore IN (SELECT id_autore FROM LIBRO WHERE genere = 'romanzo')\n  AND id_autore IN (SELECT id_autore FROM LIBRO WHERE genere = 'saggio');",
+        "INTERSECT": "SELECT A.id_autore, A.nome, A.cognome\nFROM AUTORE A JOIN LIBRO L ON A.id_autore = L.id_autore\nWHERE L.genere = 'romanzo'\nINTERSECT\nSELECT A.id_autore, A.nome, A.cognome\nFROM AUTORE A JOIN LIBRO L ON A.id_autore = L.id_autore\nWHERE L.genere = 'saggio';"
+      }
+    },
+    {
+      "id": "P4-1", "pattern": 4,
+      "domanda": "Mostra il codice, il nome e il cognome dei lettori che hanno preso in prestito libri di tutti i generi presenti nella biblioteca.",
+      "fonte": "UNIBG", "fonte_esercizio": "Es. 1 punto D: utenti che hanno preso in prestito libri di tutti i generi",
+      "adattamento": "UTENTE/PRESTITO/COPIA/DATILIBRO → LETTORE/PRESTITO_LIBRO/LIBRO; le viste di supporto sono sostituite da una sottoquery.",
+      "soluzioni": {"-": "SELECT LE.id_lettore, LE.nome, LE.cognome\nFROM LETTORE LE\nJOIN PRESTITO_LIBRO P ON LE.id_lettore = P.id_lettore\nJOIN LIBRO L ON P.id_libro = L.id_libro\nGROUP BY LE.id_lettore, LE.nome, LE.cognome\nHAVING COUNT(DISTINCT L.genere) = (SELECT COUNT(DISTINCT genere) FROM LIBRO);"}
+    },
+    {
+      "id": "P4-2", "pattern": 4,
+      "domanda": "Mostra il codice dei lettori che hanno preso in prestito tutti i libri scritti da Umberto Eco presenti nella biblioteca.",
+      "fonte": "UNIBG", "fonte_esercizio": "Es. 2 punto C: clienti che hanno noleggiato tutti i film",
+      "adattamento": "Clienti/film → lettori/libri di un autore specifico.",
+      "soluzioni": {"-": "SELECT P.id_lettore\nFROM PRESTITO_LIBRO P\nJOIN LIBRO L ON P.id_libro = L.id_libro\nJOIN AUTORE A ON L.id_autore = A.id_autore\nWHERE A.nome = 'Umberto' AND A.cognome = 'Eco'\nGROUP BY P.id_lettore\nHAVING COUNT(DISTINCT P.id_libro) = (SELECT COUNT(*)\n                                     FROM LIBRO L2 JOIN AUTORE A2 ON L2.id_autore = A2.id_autore\n                                     WHERE A2.nome = 'Umberto' AND A2.cognome = 'Eco');"}
+    },
+    {
+      "id": "P4-3", "pattern": 4,
+      "domanda": "Mostra il codice, il nome e il cognome degli autori i cui libri presenti nella biblioteca sono stati tutti presi in prestito almeno una volta.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 3b: studenti che hanno conseguito il punteggio massimo possibile nei quiz di matematica (HAVING confrontato con il totale)",
+      "adattamento": "Il confronto con il totale dei quiz diventa il confronto con il numero di libri dell'autore.",
+      "soluzioni": {"-": "SELECT A.id_autore, A.nome, A.cognome\nFROM AUTORE A\nJOIN LIBRO L ON A.id_autore = L.id_autore\nJOIN PRESTITO_LIBRO P ON L.id_libro = P.id_libro\nGROUP BY A.id_autore, A.nome, A.cognome\nHAVING COUNT(DISTINCT L.id_libro) = (SELECT COUNT(*) FROM LIBRO L2 WHERE L2.id_autore = A.id_autore);"}
+    },
+    {
+      "id": "P5-1", "pattern": 5,
+      "domanda": "Mostra il codice, il nome e il cognome dei lettori che non hanno mai preso in prestito libri di genere “horror”.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 1a: atleti italiani che non hanno partecipato a nessuna gara di discesa libera (NOT IN)",
+      "adattamento": "Atleti/gare/disciplina → lettori/prestiti/genere.",
+      "soluzioni": {
+        "NOT IN": "SELECT id_lettore, nome, cognome\nFROM LETTORE\nWHERE id_lettore NOT IN (SELECT P.id_lettore\n                         FROM PRESTITO_LIBRO P JOIN LIBRO L ON P.id_libro = L.id_libro\n                         WHERE L.genere = 'horror');",
+        "EXCEPT": "SELECT id_lettore, nome, cognome\nFROM LETTORE\nEXCEPT\nSELECT LE.id_lettore, LE.nome, LE.cognome\nFROM LETTORE LE\nJOIN PRESTITO_LIBRO P ON LE.id_lettore = P.id_lettore\nJOIN LIBRO L ON P.id_libro = L.id_libro\nWHERE L.genere = 'horror';"
+      }
+    },
+    {
+      "id": "P5-2", "pattern": 5,
+      "domanda": "Mostra il codice e il nome delle sale per cui non è mai stata effettuata una prenotazione con ora di inizio successiva alle 18:00.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Query annidate es. 2a: aule in cui non si tengono mai lezioni di corsi del primo anno",
+      "adattamento": "Aule/lezioni → sale/prenotazioni; la condizione sull'anno del corso diventa una condizione sull'orario.",
+      "soluzioni": {
+        "NOT IN": "SELECT id_sala, nome\nFROM SALA\nWHERE id_sala NOT IN (SELECT id_sala FROM PRENOTAZIONE_SALA WHERE ora_inizio > TIME '18:00');",
+        "EXCEPT": "SELECT id_sala, nome\nFROM SALA\nEXCEPT\nSELECT S.id_sala, S.nome\nFROM SALA S JOIN PRENOTAZIONE_SALA P ON S.id_sala = P.id_sala\nWHERE P.ora_inizio > TIME '18:00';"
+      }
+    },
+    {
+      "id": "P5-3", "pattern": 5,
+      "domanda": "Mostra il codice e il titolo dei libri che non sono mai stati presi in prestito da lettori iscritti alla biblioteca prima del 1° gennaio 2020.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 2a: librerie in cui non è stata venduta nessuna pubblicazione di editori con sede a Torino",
+      "adattamento": "Librerie/vendite/editori → libri/prestiti/lettori; la sede dell'editore diventa la data di iscrizione del lettore.",
+      "soluzioni": {
+        "NOT IN": "SELECT id_libro, titolo\nFROM LIBRO\nWHERE id_libro NOT IN (SELECT P.id_libro\n                       FROM PRESTITO_LIBRO P JOIN LETTORE LE ON P.id_lettore = LE.id_lettore\n                       WHERE LE.data_iscrizione < DATE '2020-01-01');",
+        "EXCEPT": "SELECT id_libro, titolo\nFROM LIBRO\nEXCEPT\nSELECT L.id_libro, L.titolo\nFROM LIBRO L\nJOIN PRESTITO_LIBRO P ON L.id_libro = P.id_libro\nJOIN LETTORE LE ON P.id_lettore = LE.id_lettore\nWHERE LE.data_iscrizione < DATE '2020-01-01';"
+      }
+    },
+    {
+      "id": "P6-1", "pattern": 6,
+      "domanda": "Per ogni sala, mostra il codice della sala, la capacità e il numero di prenotazioni effettuate nell'ultima data in cui la sala è stata prenotata.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 6b: per ogni sala, numero di prenotazioni considerando solo l'ultima data di prenotazione (soluzione correlata e soluzione alternativa)",
+      "adattamento": "SALA_RIUNIONI → SALA; la soluzione alternativa con tabella derivata è riscritta come CTE.",
+      "soluzioni": {
+        "CTE": "WITH ultima AS (\n    SELECT id_sala, MAX(data) AS ultima_data\n    FROM PRENOTAZIONE_SALA\n    GROUP BY id_sala)\nSELECT S.id_sala, S.capacità, COUNT(*) AS num_prenotazioni\nFROM SALA S\nJOIN PRENOTAZIONE_SALA P ON S.id_sala = P.id_sala\nJOIN ultima U ON P.id_sala = U.id_sala AND P.data = U.ultima_data\nGROUP BY S.id_sala, S.capacità;",
+        "CORRELAZIONE": "SELECT S.id_sala, S.capacità, COUNT(*) AS num_prenotazioni\nFROM SALA S\nJOIN PRENOTAZIONE_SALA P1 ON S.id_sala = P1.id_sala\nWHERE P1.data = (SELECT MAX(P2.data)\n                 FROM PRENOTAZIONE_SALA P2\n                 WHERE P2.id_sala = P1.id_sala)\nGROUP BY S.id_sala, S.capacità;"
+      }
+    },
+    {
+      "id": "P6-2", "pattern": 6,
+      "domanda": "Mostra il codice, il nome e il cognome dei lettori che hanno effettuato un numero di prestiti superiore al numero medio di prestiti per lettore, calcolato considerando solo i lettori che hanno effettuato almeno un prestito.",
+      "fonte": "POLITO_P2", "fonte_esercizio": "Es. 8b: contribuenti il cui reddito massimo supera la media dei redditi di tutte le dichiarazioni",
+      "adattamento": "Il confronto con una media globale diventa il confronto tra il conteggio per lettore e la media dei conteggi.",
+      "soluzioni": {
+        "CTE": "WITH conteggi AS (\n    SELECT id_lettore, COUNT(*) AS num_prestiti\n    FROM PRESTITO_LIBRO\n    GROUP BY id_lettore)\nSELECT LE.id_lettore, LE.nome, LE.cognome\nFROM LETTORE LE\nJOIN conteggi C ON LE.id_lettore = C.id_lettore\nWHERE C.num_prestiti > (SELECT AVG(num_prestiti) FROM conteggi);",
+        "CORRELAZIONE": "SELECT LE.id_lettore, LE.nome, LE.cognome\nFROM LETTORE LE\nWHERE (SELECT COUNT(*) FROM PRESTITO_LIBRO P WHERE P.id_lettore = LE.id_lettore)\n      > (SELECT COUNT(*) * 1.0 / COUNT(DISTINCT id_lettore) FROM PRESTITO_LIBRO);"
+      }
+    },
+    {
+      "id": "P6-3", "pattern": 6,
+      "domanda": "Mostra il nome, la capacità e il piano delle sale che hanno la capacità massima tra le sale dello stesso piano.",
+      "fonte": "POLITO_P1", "fonte_esercizio": "Correlazione es. 1a: alloggi con superficie superiore alla superficie media degli alloggi della stessa città",
+      "adattamento": "Alloggi/città/superficie media → sale/piano/capacità massima.",
+      "soluzioni": {
+        "CTE": "WITH max_piano AS (\n    SELECT piano, MAX(capacità) AS cap_max\n    FROM SALA\n    GROUP BY piano)\nSELECT S.nome, S.capacità, S.piano\nFROM SALA S\nJOIN max_piano M ON S.piano = M.piano AND S.capacità = M.cap_max;",
+        "CORRELAZIONE": "SELECT S1.nome, S1.capacità, S1.piano\nFROM SALA S1\nWHERE S1.capacità = (SELECT MAX(S2.capacità)\n                     FROM SALA S2\n                     WHERE S2.piano = S1.piano);"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "_nota": "Riga aggiunta al prompt dopo la domanda, solo per i pattern 3, 5 e 6 (soluzioni multiple). Per gli altri pattern {{STRATEGIA}} resta vuoto.",
+  "JOIN": "Risolvi la query utilizzando l'operatore JOIN.",
+  "IN": "Risolvi la query utilizzando l'operatore IN.",
+  "INTERSECT": "Risolvi la query utilizzando l'operatore INTERSECT.",
+  "NOT IN": "Risolvi la query utilizzando l'operatore NOT IN.",
+  "EXCEPT": "Risolvi la query utilizzando l'operatore EXCEPT.",
+  "CTE": "Risolvi la query utilizzando una Common Table Expression (clausola WITH).",
+  "CORRELAZIONE": "Risolvi la query utilizzando una sottoquery correlata."
+}
